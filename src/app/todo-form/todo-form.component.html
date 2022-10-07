@@ -1,0 +1,6 @@
+<form>
+    <label for="todo"> Enter new task: </label>
+    <input name="todo" placeholder="Add your to-do" [(ngModel)]="todo.task"/>
+    <br>
+    <button (click)="addNewTodo()"> Add </button>
+</form>

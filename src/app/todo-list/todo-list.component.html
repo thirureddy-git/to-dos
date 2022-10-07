@@ -1,0 +1,19 @@
+<div class="wrapper">
+<h2> To-Do List </h2>
+<h3> A place to store your to-dos </h3>
+<br>
+<body>
+<form>
+    <input name="filter" placeholder="Filter your to-dos"/>
+</form><br>
+<app-todo-item
+*ngFor="let i = index; let t of todos"
+[id]="i"
+[todo]="t"
+(complete)="completeTodo(i)"
+(remove)="removeTodo(i)"
+></app-todo-item>
+<br>
+<app-todo-form (addTodo)="newTodo($event)"></app-todo-form>
+</body>
+</div>

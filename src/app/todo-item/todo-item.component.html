@@ -1,0 +1,7 @@
+<div>
+    {{ id + 1 }}.
+    <button (click)="completeTodo()" *ngIf="!todo.completed"> Complete </button>
+    <span [ngClass]="todo.completed ? 'taskComplete': ''">{{ todo.task }} </span>
+    <button (click)="removeTodo()"> X </button>
+    <br>
+</div>
